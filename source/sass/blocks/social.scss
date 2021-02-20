@@ -1,0 +1,14 @@
+.social {
+  @include list-reset;
+  display: flex;
+}
+
+.social__item {
+  margin-right: 20px;
+}
+
+.social__link {
+  display: block;
+
+  @include icon-hover;
+}

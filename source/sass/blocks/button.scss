@@ -1,0 +1,50 @@
+.button {
+  min-width: 190px;
+  margin: 0;
+  padding: 15px;
+
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: $grey;
+
+  @include transition();
+
+  @media (pointer: fine) {
+    &:hover {
+      box-shadow: 10px 10px 20px rgba(51, 51, 51, 0.2);
+    }
+
+    &:focus {
+      opacity: 0.8;
+      // transition: opacity 0.2s ease;
+    }
+
+    &:active {
+      opacity: 0.6;
+      // transition: opacity 0.2s ease;
+    }
+  }
+
+  border: none;
+
+  &--green {
+    background-color: $green;
+
+    color: #ffffff;
+
+    @media (pointer: fine) {
+      &:hover {
+        box-shadow: 10px 10px 20px rgba($green, 0.5);
+      }
+    }
+  }
+
+  @include mobile {
+    // width: 280px;
+    min-width: 280px;
+    flex-grow: 1;
+  }
+}
