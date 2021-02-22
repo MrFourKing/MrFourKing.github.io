@@ -1,0 +1,36 @@
+.link {
+  position: relative;
+
+  transition: color $default-transition-settings;
+
+  outline: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    bottom: -2px;
+    left: 0;
+
+    width: 0;
+    height: 0.1em;
+    background-color: $color-green;
+
+    transition: opacity $default-transition-settings,
+      width $default-transition-settings;
+  }
+
+  @include hover {
+    color: $color-green;
+
+    &::after {
+      width: 100%;
+
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

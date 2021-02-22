@@ -1,14 +1,32 @@
 .social {
   @include list-reset;
   display: flex;
-}
 
-.social__item {
-  margin-right: 20px;
-}
+  &__item {
+    margin-right: 20px;
+  }
 
-.social__link {
-  display: block;
+  &__link {
+    display: block;
 
-  @include icon-hover;
+    transition: transform $default-transition-settings;
+
+    @include hover {
+      svg {
+        fill: $color-green;
+
+        transition: fill $default-transition-settings;
+      }
+
+      transform: scale(1.2);
+
+      transition: transform $default-transition-settings;
+    }
+
+    &:active {
+      opacity: 0.6;
+
+      transition: opacity $default-transition-settings;
+    }
+  }
 }

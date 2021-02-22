@@ -1,4 +1,4 @@
-.button {
+.btn {
   min-width: 190px;
   margin: 0;
   padding: 15px;
@@ -8,9 +8,9 @@
   text-transform: uppercase;
   text-align: center;
 
-  background-color: $grey;
+  background-color: $color-grey;
 
-  @include transition();
+  transition: all $default-transition-settings;
 
   @media (pointer: fine) {
     &:hover {
@@ -31,13 +31,13 @@
   border: none;
 
   &--green {
-    background-color: $green;
+    background-color: $color-green;
 
     color: #ffffff;
 
     @media (pointer: fine) {
       &:hover {
-        box-shadow: 10px 10px 20px rgba($green, 0.5);
+        box-shadow: 10px 10px 20px rgba($color-green, 0.5);
       }
     }
   }

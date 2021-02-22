@@ -13,11 +13,23 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/typography";
+@import "global/section";
+
+// Components
+//---------------------------------
+
+@import "blocks/link";
+@import "blocks/btn";
+@import "blocks/main-menu";
+@import "blocks/contacts";
+@import "blocks/social";
 
 // Blocks
 //---------------------------------
 
 @import "blocks/header";
+@import "blocks/about";
 @import "blocks/footer";
 @import "blocks/modal";
 

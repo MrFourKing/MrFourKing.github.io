@@ -16,6 +16,7 @@
   min-height: 100vh;
   min-height: calc(100 * var(--vh, 1vh));
   overflow-x: hidden;
+  padding-top: 83px;
 
   &--no-scrollbar {
     height: 100vh;
@@ -36,6 +37,10 @@
 
   main {
     flex-grow: 1;
+  }
+
+  @include tablet {
+    padding-top: 60px;
   }
 }
 

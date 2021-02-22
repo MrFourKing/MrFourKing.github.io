@@ -1,0 +1,14 @@
+.section {
+  display: grid;
+  column-gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &--50 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &--30-70 {
+    grid-template-columns: 1fr 2fr;
+  }
+}

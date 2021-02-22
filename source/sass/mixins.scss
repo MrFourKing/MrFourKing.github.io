@@ -1,5 +1,7 @@
 @mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
     @content;
   }
 }
@@ -62,18 +64,16 @@
   }
 } */
 
-@mixin opacity-interactive {
-  transition: opacity 0.2s ease;
 
-  @media (pointer: fine) {
 
-    &:hover,
+@mixin hover {
+
+  @media (hover: hover),
+  screen and (min-width: 0\0) {
+
+    &:hover:not(:disabled),
     &:focus {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
+      @content;
     }
   }
 }
@@ -94,4 +94,16 @@
   border: none;
 
   outline: 0;
+}
+
+@mixin opacity-hover {
+  transition: opacity $default-transition-settings;
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
