@@ -20,6 +20,12 @@
   }
 }
 
+@mixin container {
+  @media (max-width: $container) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (max-width: $viewport--lg - 1) {
     @content;

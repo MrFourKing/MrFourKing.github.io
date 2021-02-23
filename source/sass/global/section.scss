@@ -1,14 +1,36 @@
 .section {
-  display: grid;
-  column-gap: 20px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  border-bottom: 1px solid $color-grey;
+
+  .container {
+    display: grid;
+    column-gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+  }
 
   &--50 {
-    grid-template-columns: repeat(2, 1fr);
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+
+      @include tablet {
+        &>*:last-child {
+          order: -1;
+        }
+      }
+    }
   }
 
   &--30-70 {
-    grid-template-columns: 1fr 2fr;
+    .container {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  @include tablet {
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

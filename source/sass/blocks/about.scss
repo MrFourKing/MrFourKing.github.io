@@ -15,9 +15,49 @@
 
   &__img {
     width: 100%;
+    height: 100%;
 
     img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include container {
+      img {
+        height: auto;
+      }
+    }
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

@@ -33,7 +33,7 @@ const initHeader = () => {
   const initLinksAction = () => {
     navLinks.forEach((item) => {
       item.addEventListener('click', (evt) => {
-        const target = document.querySelector(item.dataset.target);
+        const target = item.dataset.target === '#start' ? 0 - pageYOffset : document.querySelector(item.dataset.target);
         evt.preventDefault();
         closeMenu();
         moveTo.move(target);

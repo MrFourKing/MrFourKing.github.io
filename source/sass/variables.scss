@@ -12,6 +12,7 @@ $color-transparent:               rgba(255, 255, 255, 0);
 $color-black:                     #252525;
 $color-black--80:                   rgba($color-black, 0.8);
 $color-green:                     #3aa935;
+$color-green-50:                    rgba($color-green, 0.5);
 $color-grey:                      #e3e3e3;
 $color-dark-grey:                 #808080;
 
@@ -38,6 +39,7 @@ $viewport--xs:                      320px;
 $viewport--sm:                      375px;
 $viewport--md:                      768px;
 $viewport--lg:                      1024px;
+$container:                         1200px;
 $viewport--xl:                      1440px;
 $viewport--xxl:                     1920px;
 

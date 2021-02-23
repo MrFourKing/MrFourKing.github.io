@@ -13,6 +13,10 @@
       margin-right: 0;
     }
 
+    @include tablet {
+      margin-right: 15px;
+    }
+
    @include mobile {
      margin-right: 0;
      margin-bottom: 20px;

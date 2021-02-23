@@ -9,6 +9,8 @@
   &__link {
     display: block;
 
+    outline: none;
+
     transition: transform $default-transition-settings;
 
     @include hover {
