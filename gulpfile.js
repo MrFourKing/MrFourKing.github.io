@@ -24,7 +24,7 @@ const html = () => {
         test: 'text'
       }
     }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('docs'));
 };
 
 const css = () => {
@@ -35,18 +35,18 @@ const css = () => {
       .pipe(postcss([autoprefixer({
         grid: true,
       })]))
-      .pipe(gulp.dest('build/css'))
+      .pipe(gulp.dest('docs/css'))
       .pipe(csso())
       .pipe(rename('style.min.css'))
       .pipe(sourcemap.write('.'))
-      .pipe(gulp.dest('build/css'))
+      .pipe(gulp.dest('docs/css'))
       .pipe(server.stream());
 };
 
 const js = () => {
   return gulp.src(['source/js/main.js'])
       .pipe(webpackStream(webpackConfig))
-      .pipe(gulp.dest('build/js'))
+      .pipe(gulp.dest('docs/js'))
 };
 
 const svgo = () => {
@@ -67,12 +67,12 @@ const sprite = () => {
   return gulp.src('source/img/sprite/*.svg')
       .pipe(svgstore({inlineSvg: true}))
       .pipe(rename('sprite_auto.svg'))
-      .pipe(gulp.dest('build/img'));
+      .pipe(gulp.dest('docs/img'));
 };
 
 const syncserver = () => {
   server.init({
-    server: 'build/',
+    server: 'docs/',
     notify: false,
     open: true,
     cors: true,
@@ -94,12 +94,12 @@ const refresh = (done) => {
 
 const copysvg = () => {
   return gulp.src('source/img/**/*.svg', {base: 'source'})
-      .pipe(gulp.dest('build'));
+      .pipe(gulp.dest('docs'));
 };
 
 const copypngjpg = () => {
   return gulp.src('source/img/**/*.{png,jpg}', {base: 'source'})
-      .pipe(gulp.dest('build'));
+      .pipe(gulp.dest('docs'));
 };
 
 const copy = () => {
@@ -115,11 +115,11 @@ const copy = () => {
   ], {
     base: 'source',
   })
-      .pipe(gulp.dest('build'));
+      .pipe(gulp.dest('docs'));
 };
 
 const clean = () => {
-  return del('build');
+  return del('docs');
 };
 
 const build = gulp.series(clean, svgo, copy, css, sprite, js, html);
@@ -137,12 +137,12 @@ const createWebp = () => {
 };
 
 const optimizeImages = () => {
-  return gulp.src('build/img/**/*.{png,jpg}')
+  return gulp.src('docs/img/**/*.{png,jpg}')
       .pipe(imagemin([
         imagemin.optipng({optimizationLevel: 3}),
         imagemin.mozjpeg({quality: 75, progressive: true}),
       ]))
-      .pipe(gulp.dest('build/img'));
+      .pipe(gulp.dest('docs/img'));
 };
 
 exports.build = build;

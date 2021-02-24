@@ -1,0 +1,37 @@
+.date-list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+
+    border-bottom: 1px solid $color-grey;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+      border: none;
+    }
+  }
+
+  &__item-title {
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      color: $color-dark-grey;
+      text-transform: none;
+    }
+  }
+
+  &__date {
+    margin-bottom: 10px;
+  }
+}

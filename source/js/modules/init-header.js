@@ -9,6 +9,7 @@ const initHeader = () => {
   const burgerBtn = header.querySelector('.header__toggle');
   const navBlock = header.querySelector('.header__nav');
   const navLinks = navBlock.querySelectorAll('.main-menu__link');
+  const logoLink = header.querySelector('.header__logo');
 
   const moveTo = new MoveTo();
 
@@ -55,12 +56,16 @@ const initHeader = () => {
   };
 
   window.addEventListener('scroll', () => {
-    window.scrollY > 0 ? header.classList.add('header--scroll') : header.classList.remove('header--scroll')
+    window.scrollY > 0 ? header.classList.add('header--scroll') : header.classList.remove('header--scroll');
   });
-
 
   initBurgerAction();
   initLinksAction();
+
+  logoLink.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    moveTo.move(0 - pageYOffset);
+  });
 };
 
 export {
