@@ -80,12 +80,12 @@ c2.5-4.1,6-6.1,10.7-6.1c3.6,0,6.3,1.2,8.1,3.4c1.9,2.3,2.8,5.6,2.8,9.9L150,50L150
       <li class="main-menu__item">
         <a class="main-menu__link link" href="#edu" data-target="#edu">Образование</a>
       </li>
-      <li class="main-menu__item">
+      <!-- <li class="main-menu__item">
         <a class="main-menu__link link" href="#port" data-target="#port">Портфолио</a>
       </li>
       <li class="main-menu__item">
         <a class="main-menu__link link" href="#clbk" data-target="#clbk">Связаться со мной</a>
-      </li>
+      </li> -->
     </ul>
   </nav>
 </div>
@@ -122,7 +122,7 @@ c2.5-4.1,6-6.1,10.7-6.1c3.6,0,6.3,1.2,8.1,3.4c1.9,2.3,2.8,5.6,2.8,9.9L150,50L150
           <span class="contacts__type">Соцсети</span>
           <ul class="social">
             <li class="social__item">
-              <a class="social__link" href="#" target="_blank">
+              <a class="social__link" href="https://vk.com/mrfourking" target="_blank">
                 <span class="visually-hidden">Vkontakte</span>
                 <svg width="16" height="16">
                   <use xlink:href="img/sprite_auto.svg#vk"></use>
@@ -130,23 +130,23 @@ c2.5-4.1,6-6.1,10.7-6.1c3.6,0,6.3,1.2,8.1,3.4c1.9,2.3,2.8,5.6,2.8,9.9L150,50L150
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#" target="_blank">
+              <a class="social__link" href="https://www.instagram.com/fokinia/" target="_blank">
                 <span class="visually-hidden">Instagram</span>
                 <svg width="16" height="16">
                   <use xlink:href="img/sprite_auto.svg#instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="social__item">
+            <!-- <li class="social__item">
               <a class="social__link" href="#" target="_blank">
                 <span class="visually-hidden">Twitter</span>
                 <svg width="16" height="16">
                   <use xlink:href="img/sprite_auto.svg#twitter"></use>
                 </svg>
               </a>
-            </li>
+            </li> -->
             <li class="social__item">
-              <a class="social__link" href="#" target="_blank">
+              <a class="social__link" href="https://github.com/mrfourking" target="_blank">
                 <span class="visually-hidden">Github</span>
                 <svg width="16" height="16">
                   <use xlink:href="img/sprite_auto.svg#github"></use>
@@ -154,7 +154,7 @@ c2.5-4.1,6-6.1,10.7-6.1c3.6,0,6.3,1.2,8.1,3.4c1.9,2.3,2.8,5.6,2.8,9.9L150,50L150
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#" target="_blank">
+              <a class="social__link" href="https://api.whatsapp.com/send?phone=79107066623" target="_blank">
                 <span class="visually-hidden">Whatsapp</span>
                 <svg width="16" height="16">
                   <use xlink:href="img/sprite_auto.svg#whatsapp"></use>
@@ -174,11 +174,14 @@ c2.5-4.1,6-6.1,10.7-6.1c3.6,0,6.3,1.2,8.1,3.4c1.9,2.3,2.8,5.6,2.8,9.9L150,50L150
       </ul>
       <div class="about__btns">
         <!-- <a class="about__btn btn btn--green" href="#">Связаться</a> -->
-        <a class="about__btn btn btn--grey" href="resume.pdf">Скачать резюме</a>
+        <a class="about__btn btn btn--grey" href="file/resume.pdf">Скачать резюме</a>
       </div>
     </div>
     <div class="about__img">
-      <img src="http://placehold.it/300x200">
+      <picture>
+        <source type="image/webp" srcset="img/content/avatar.webp 1x, img/content/avatar@2x.webp 2x">
+          <img src="img/content/avatar.jpg" srcset="img/content/avatar@2x.jpg 2x" width="550" height="331" alt="Илья Фокин">
+      </picture>
     </div>
   </div>
 </section>
@@ -226,21 +229,30 @@ c2.5-4.1,6-6.1,10.7-6.1c3.6,0,6.3,1.2,8.1,3.4c1.9,2.3,2.8,5.6,2.8,9.9L150,50L150
       <ul class="experience__list date-list">
         <li class="date-list__item">
           <h3 class="date-list__item-title">
-            <b>Профессия &laquo;Фронтенд-разработчик&raquo;</b>
-            <span>HTML Academy</span>
+            <b>HTML-верстальщик</b>
+            <span>Лига&nbsp;А.</span>
           </h3>
-          <span class="date-list__date">Май, 2019&nbsp;&mdash; Ноябрь, 2019</span>
-          <p class="date-list__desc">На&nbsp;курсе изучил адаптивную верстку, автоматизацию верстки, современные подходы
-            к
-            разработке, базовые знания&nbsp;JS, работа с&nbsp;DOM, AJAX.</p>
+          <span class="date-list__date">Сентябрь, 2020&nbsp;&mdash; по настоящее время</span>
+          <p class="date-list__desc">
+            Вёрстка многостраничных сайтов и&nbsp;лендингов, вёрстка компонентов дизайн-систем. Первичная подготовка
+            проектов
+            к&nbsp;разработке. Декомпозиция проектов на&nbsp;модули и&nbsp;компоненты. Помощь в&nbsp;доработке
+            существующих проектов.
+            Вёрстка с&nbsp;помощью шаблонизотора Pug. Рефакторинг проектов и&nbsp;модулей. Вёрстка под CMS
+            Wordpress.
+          </p>
         </li>
         <li class="date-list__item">
           <h3 class="date-list__item-title">
-            <b>Автоматизированные системы управления и&nbsp;обработки информации</b>
-            <span>ИАТЭ&nbsp;НИЯУ&nbsp;МИФИ</span>
+            <b>HTML-верстальщик стажер</b>
+            <span>Лига&nbsp;А.</span>
           </h3>
-          <span class="date-list__date">2008&nbsp;&mdash; 2012</span>
-          <p class="date-list__desc">Бакалавр по&nbsp;направлению &laquo;Анализ и&nbsp;синтез проектных решений&raquo;</p>
+          <span class="date-list__date">Апрель, 2020&nbsp;&mdash; Сентябрь, 2020</span>
+          <p class="date-list__desc">
+            Вёрстка многостраничных сайтов и&nbsp;лендингов, вёрстка компонентов дизайн-систем. Первичная подготовка
+            проектов
+            к&nbsp;разработке.
+          </p>
         </li>
       </ul>
     </div>
@@ -282,13 +294,13 @@ c2.5-4.1,6-6.1,10.7-6.1c3.6,0,6.3,1.2,8.1,3.4c1.9,2.3,2.8,5.6,2.8,9.9L150,50L150
   </div>
 </section>
 
-      <div class="container">
-        <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
-        <p><a href="#" data-modal="success">modal--success link</a></p>
-      </div>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+  <p class="footer__copyright">
+    Илья Фокин © 2021
+  </p>
+</footer>
 
 
     

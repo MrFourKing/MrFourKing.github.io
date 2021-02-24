@@ -1049,10 +1049,23 @@ p {
   .skills__item:last-child {
     padding-bottom: 0;
     border: none; }
+  @media (max-width: 767px) {
+    .skills__item {
+      margin-bottom: 20px; }
+      .skills__item:last-child {
+        margin-bottom: 0; } }
 
 .footer {
-  min-height: 100px;
-  padding: 0 60px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 60px; }
 
 .modal {
   position: fixed;
