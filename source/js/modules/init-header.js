@@ -11,7 +11,9 @@ const initHeader = () => {
   const navLinks = navBlock.querySelectorAll('.main-menu__link');
   const logoLink = header.querySelector('.header__logo');
 
-  const moveTo = new MoveTo();
+  const moveTo = new MoveTo({
+    tolerance: 85,
+  });
 
   const openMenu = () => {
     burgerBtn.ariaPressed = 'true';
@@ -34,7 +36,7 @@ const initHeader = () => {
   const initLinksAction = () => {
     navLinks.forEach((item) => {
       item.addEventListener('click', (evt) => {
-        const target = item.dataset.target === '#start' ? 0 - pageYOffset : document.querySelector(item.dataset.target);
+        const target = document.querySelector(item.dataset.target);
         evt.preventDefault();
         closeMenu();
         moveTo.move(target);
