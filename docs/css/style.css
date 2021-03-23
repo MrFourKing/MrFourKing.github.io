@@ -1055,6 +1055,48 @@ p {
       .skills__item:last-child {
         margin-bottom: 0; } }
 
+.portfolio {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .portfolio__title {
+    margin-bottom: 30px; }
+  .portfolio__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px; }
+  .portfolio__menu-item {
+    margin-right: 30px; }
+  .portfolio__menu-link {
+    font-weight: 600;
+    text-transform: uppercase; }
+    .portfolio__menu-link--active {
+      color: #3aa935; }
+  .portfolio__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px; }
+  .portfolio__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
